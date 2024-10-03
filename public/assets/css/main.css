@@ -1,0 +1,390 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;500;600;700&family=Poppins:wght@300;700&display=swap');
+html {
+    font-family: 'Bai Jamjuree', sans-serif, 'Poppins', sans-serif;
+}
+
+
+/* Smooth scroll behavior */
+:root {
+  scroll-behavior: smooth;
+}
+
+/*--------------------------------------------------------------
+# General
+--------------------------------------------------------------*/
+
+
+
+/*--------------------------------------------------------------
+# Sections & Section Header
+--------------------------------------------------------------*/
+.zzz{
+    width: 100%;
+    height: 200px;
+}
+.dd{
+    padding: 10px;
+
+}
+
+
+
+
+
+/*--------------------------------------------------------------
+# Page Header
+--------------------------------------------------------------*/
+
+
+
+/*--------------------------------------------------------------
+# Scroll top button
+
+
+/*--------------------------------------------------------------
+# Preloader
+--------------------------------------------------------------*/
+#preloader {
+  display: flex;
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 99999;
+}
+
+#preloader:before,
+#preloader:after {
+  content: "";
+  background-color: rgb(233, 137, 27);
+  position: absolute;
+  inset: 0;
+  width: 50%;
+  height: 100%;
+  transition: all 0.3s ease 0s;
+  z-index: -1;
+}
+
+#preloader:after {
+  left: auto;
+  right: 0;
+}
+
+#preloader .line {
+  position: relative;
+  overflow: hidden;
+  margin: auto;
+  width: 1px;
+  height: 280px;
+  transition: all 0.8s ease 0s;
+}
+
+#preloader .line:before {
+  content: "";
+  position: absolute;
+  background-color: #fff;
+  left: 0;
+  top: 50%;
+  width: 1px;
+  height: 0%;
+  transform: translateY(-50%);
+  animation: lineincrease 1000ms ease-in-out 0s forwards;
+}
+
+#preloader .line:after {
+  content: "";
+  position: absolute;
+  background-color: #999;
+  left: 0;
+  top: 0;
+  width: 1px;
+  height: 100%;
+  transform: translateY(-100%);
+  animation: linemove 1200ms linear 0s infinite;
+  animation-delay: 2000ms;
+
+}
+
+#preloader.loaded .line {
+  opacity: 0;
+  height: 100% !important;
+}
+
+#preloader.loaded .line:after {
+  opacity: 0;
+}
+
+#preloader.loaded:before,
+#preloader.loaded:after {
+  animation: preloaderfinish 300ms ease-in-out 500ms forwards;
+}
+
+@keyframes lineincrease {
+  0% {
+    height: 0%;
+  }
+
+  100% {
+    height: 100%;
+  }
+}
+
+@keyframes linemove {
+  0% {
+    transform: translateY(200%);
+  }
+
+  100% {
+    transform: translateY(-100%);
+  }
+}
+
+@keyframes preloaderfinish {
+  0% {
+    width: 5 0%;
+  }
+
+  100% {
+    width: 0%;
+  }
+}
+
+
+
+
+
+@media (max-width: 1199px) {
+  .testimonials .swiper-slide-active {
+    opacity: 1;
+  }
+
+  .testimonials .swiper-pagination {
+    margin-top: 0;
+  }
+
+  .testimonials .testimonial-item {
+    margin: 40px 20px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .testimonials .swiper-slide-next {
+    opacity: 1;
+    transform: scale(1.12);
+  }
+}
+
+/*--------------------------------------------------------------
+# Pricing Section
+--------------------------------------------------------------*/
+
+
+
+/*--------------------------------------------------------------
+# Services Section
+--------------------------------------------------------------*/
+
+* {box-sizing: border-box;}
+
+body {
+
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.header {
+  overflow: hidden;
+
+  padding: 20px 10px;
+  margin-left: 70px;
+  margin-right: 70px;
+}
+
+.header a {
+  float: left;
+  color: black;
+  text-align: center;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px;
+  line-height: 25px;
+
+}
+
+.header a.logo {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+
+
+.header a.activeee {
+
+
+}
+
+.header-right {
+  float: right;
+
+}
+.dd {
+    text-align: left;
+    padding: 15px;
+    background-color: #f8f9fa;
+    color: black;
+
+  }
+
+  .dd h4 {
+    font-size: 25px;
+    color: rgb(10, 10, 14);
+
+  }
+
+  .dd a {
+
+    float:right;
+    padding: 5px;
+    text-decoration: none;
+    background-color: transparent;
+    color: rgb(233, 137, 27);
+    border: 2px solid rgb(233, 137, 27);
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-left: 20px;
+  }
+  .dd a:hover {
+    background-color: rgb(233, 137, 27);
+    color: white;
+    border: rgb(255, 255, 255);
+}
+
+
+
+
+@media screen and (max-width: 500px) {
+  .header a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+
+  .header-right {
+
+    float: center;
+  }
+}
+
+.custom-select {
+    font-size: 20px;
+    color: #333333;
+    width: 200px;
+    padding: 8px;
+
+  }
+
+  .custom-select option {
+    font-size: 20px;
+    padding: 5px;
+
+  }
+
+
+
+/*--------------------------------------------------------------
+# tjribbiy
+--------------------------------------------------------------*/
+/* تعريف الألوان */
+:root {
+    --color-primary: #3498db;
+    --color-secondary: #2ecc71;
+    --color-tertiary: #e74c3c;
+    --color-quaternary: #f1c40f;
+  }
+
+  /* تنسيق الجاليري */
+  .gallery {
+    margin-top: 115px;
+    margin-bottom: 50px;
+  }
+
+  .gallery .gallery-item {
+    position: relative;
+    overflow: hidden;
+
+  }
+
+  /* تنسيق الحاوية */
+  .container-fluid {
+    padding: 3% 2%;
+  }
+
+  /* تنسيق الصف */
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  /* تنسيق العنصر z */
+  .z {
+    flex: 0 0 30%;
+    max-width: 30%;
+    position: relative;
+    padding: 0 15px;
+    margin-bottom: 30px;
+  }
+
+  /* تنسيق الروابط في الجاليري */
+  .gallery-links {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    transition: all ease-in-out 0.3s;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 3;
+    height: 200px;
+  }
+
+  .gallery-item:hover .gallery-links {
+    opacity: 1;
+  }
+
+  /* تنسيق الزر في المعلومات */
+
+
+  .glightbox
+ {
+    color: rgba(255, 255, 255, 0.8);
+    background-color: rgba(0, 0, 0, 0.2);
+    font-size: 24px;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s;
+
+    margin-bottom: 100px;
+    margin-top: 70px;
+
+    margin-left: 170px;
+ }
+
+  /* تنسيق العناصر الأخرى */
+  /* ... */
+
+  /* تنسيقات الاستجابة */
+  @media (max-width: 575px) {
+    .z {
+      flex: 0 0 100%;
+      max-width: 100%;
+    }
+
+    .gallery-single .swiper-button-prev,
+    .gallery-single .swiper-button-next {
+      display: none;
+    }
+  }
